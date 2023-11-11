@@ -1,19 +1,20 @@
+#Даны координаты двух различных полей шахматной доски
+#x1, y1, x2, y2(целые числа, лежащие в диопазоне 1-8).
+#Проверить истинность высказывания: "Ладья за один ход
+#может перейти с одного поля на другое"
 import random
 
-x1 = random.randint(1,8)
+x1 = int(input("Введите число от 1 до 8"))
 
-x2 = random.randint(1,8)
+x2 = int(input("Введите число от 1 до 8"))
 
-y1 = random.randint(1,8)
+y1 = int(input("Введите число от 1 до 8"))
 
-y2 = random.randint(1,8)
+y2 = int(input("Введите число от 1 до 8"))
 
-neit_poz = [x1, y1]
+print("neit_poz", x1, y1,"next_poz", x2, y2)
 
-next_poz = [x2, y2]
-
-print(x1, x2, y1, y2)
-
-if neit_poz != next_poz:
-    print("True")
-else: print("False")
+if x1 != x2 or y1 != y2:
+    print("Ладья за один ход может совершить один ход")
+else:
+    print("Ладья не может совершить ход")

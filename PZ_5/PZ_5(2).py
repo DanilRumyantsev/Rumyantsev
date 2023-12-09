@@ -16,3 +16,4 @@ y2 = float(input("Введите координату y2"))
 
 per, ar = RectPS(x1 ,y1, x2, y2)
 print(per, ar)
+

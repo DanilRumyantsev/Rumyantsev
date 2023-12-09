@@ -17,3 +17,4 @@ def Myfunction():
         print("Некорректный ввод")
 
 Myfunction()
+

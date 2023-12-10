@@ -9,11 +9,30 @@ def RectPS(x1, y1, x2, y2):
     S = abs(x1 - x2) * abs(y1 - y2)
     return P, S
 
-x1 = float(input("Введите координату x"))
-y1 = float(input("Введите координату y"))
-x2 = float(input("Введите координату x2"))
-y2 = float(input("Введите координату y2"))
+print("Первый прямоугольник")
 
-per, ar = RectPS(x1 ,y1, x2, y2)
-print(per, ar)
+x1 = float(input("Введите координату x: "))
+y1 = float(input("Введите координату y: "))
+x2 = float(input("Введите координату x2: "))
+y2 = float(input("Введите координату y2: "))
+
+print("Второй прямоугольник")
+
+x1_2 = float(input("Введите координату x: "))
+y1_2 = float(input("Введите координату y: "))
+x2_2 = float(input("Введите координату x2: "))
+y2_2 = float(input("Введите координату y2: "))
+
+print("Третий прямоугольник")
+
+x1_3 = float(input("Введите координату x: "))
+y1_3 = float(input("Введите координату y: "))
+x2_3 = float(input("Введите координату x2: "))
+y2_3 = float(input("Введите координату y2: "))
+
+per1, ar1 = RectPS(x1, y1, x2, y2)
+per2, ar2 = RectPS(x1_2, y1_2, x2_2, y2_2)
+per3, ar3 = RectPS(x1_3, y1_3, x2_3, y2_3)
+
+print(f"Первый прямоугольник{per1, ar1} ,\nВторой прямоугольник{per2, ar2} ,\nТретий прямоугольник{per3, ar3}")
 

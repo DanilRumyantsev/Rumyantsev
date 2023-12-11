@@ -3,16 +3,15 @@
 # содержат ровно три буквы «А».
 
 def three_A(s):
-    words = s.split()  # Разбиваем строку на слова
+    words = s.split()
     count = 0
 
     for word in words:
-        if word.count('А') == 3:  # Подсчитываем количество букв "А" в слове
+        if word.count('А') == 3:
             count += 1
 
     return count
 
-# Пример использования функции
 input_string = "АРХАНГЕЛЬСК АРБУЗ ЧАЙНАЯ АНАСТАСИЯ АРМАТУРА ОБРАЗ МАССА"
-result = three_A(input_string.upper())  # Приводим к верхнему регистру для учета заглавных букв
+result = three_A(input_string.upper())
 print(f"Количество слов с тремя буквами 'А': {result}")

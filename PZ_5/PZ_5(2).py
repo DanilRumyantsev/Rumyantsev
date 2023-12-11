@@ -9,8 +9,6 @@ def RectPS(x1, y1, x2, y2):
     S = abs(x1 - x2) * abs(y1 - y2)
     return P, S
 
-print("Первый прямоугольник")
-
 count = 3
 
 mass = []
@@ -25,4 +23,5 @@ for _ in range(count):
 
 for i in range(count):
    print(f"{i+1} прямоугольник{RectPS(mass[i][0], mass[i][1], mass[i][2], mass[i][3])}")
+
 

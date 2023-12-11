@@ -26,12 +26,12 @@ else:
         list.append(random.randint(0, 100))
         t += 1
 
-list.sort()
+    list.sort()
 
-print(list)
+    print(list)
 
-d = function(list)
+    d = function(list)
 
-if d:
-    print(f"Элементы образуют прогрессию с знаменателем {d}")
-else: print("Не образуют")
+    if d:
+        print(f"Элементы образуют прогрессию с знаменателем {d}")
+    else: print("Не образуют")

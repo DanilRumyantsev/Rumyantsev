@@ -13,7 +13,7 @@ print("Первый прямоугольник")
 
 count = 3
 
-govno = []
+mass = []
 for _ in range(count):
     values = [
     float(input("Введите координату x: ")),
@@ -21,8 +21,8 @@ for _ in range(count):
     float(input("Введите координату x2: ")),
     float(input("Введите координату y2: "))
     ]
-    govno.append(values)
+    mass.append(values)
 
 for i in range(count):
-   print(f"{i+1} прямоугольник{RectPS(govno[i][0], govno[i][1], govno[i][2], govno[i][3])}")
+   print(f"{i+1} прямоугольник{RectPS(mass[i][0], mass[i][1], mass[i][2], mass[i][3])}")
 

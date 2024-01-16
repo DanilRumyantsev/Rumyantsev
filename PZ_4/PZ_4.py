@@ -21,4 +21,4 @@ if A > B:
 
 for i in range(A, B + 1):
     c = i - A + 1
-    print((str(i) + "") * c + "\n")
+    print((str(i) + " ") * c + "\n")

@@ -15,6 +15,7 @@ for i, r in enumerate(rost, start=1):
 
 print("Результаты:")
 print("Баскетбольная команда:")
+
 for player in basketball_players:
     print(f"Игрок {player[0]} - {player[1]} см")
 

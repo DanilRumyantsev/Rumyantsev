@@ -2,6 +2,9 @@
 # Вывести размер полученного массива.
 
 a = [[1, -2, 3], [-1, 3, -2], [4, -7, 10]]
-
-for num in a:
-    if num == a[0]
+b = []
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        if a[i][j] < 0:
+            b.append(a[i][j])
+print(f"Размер полученного массива: {len(b)}, массив : {b}")

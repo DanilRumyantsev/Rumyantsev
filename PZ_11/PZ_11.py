@@ -30,6 +30,8 @@ f2 = open('text_file_2.txt', 'w', encoding='UTF-8')
 f2.write('Исходные данные')
 f2.write('\n')
 f2.writelines(f1_num)
+f2.write('\n')
+f2.writelines(f2_num)
 f2.close()
 
 f1 = open('text_file_1.txt')
@@ -45,27 +47,12 @@ for elem in k:
     if elem < min:
         min = elem
 
-f2 = open('text_file_2.txt', 'a', encoding='UTF-8')
-f2.write("\n")
-print('Количество элементов равных трём: ', krat_3, '\n','Произведение всех чисел: ', proiz, '\n', 'Минимальный элемент: ', min, file=f2)
-f2.close()
-
-f3 = open('text_file_3.txt', 'w', encoding='UTF-8')
-f3.writelines(f2_num)
-f3.close()
-
 f3 = open('text_file_3.txt', encoding='UTF-8')
 l = f3.read()
 l = l.split()
 for i in range(len(l)):
     l[i] = int(l[i])
 f3.close()
-
-f4 = open('text_file_4.txt', 'w', encoding='UTF-8')
-f4.write('Исходные данные')
-f4.write('\n')
-f4.writelines(f2_num)
-f4.close()
 
 f3 = open('text_file_3.txt')
 krat_5 = 0
@@ -75,7 +62,9 @@ for i in range(len(l)):
 sum = sum(l)
 sr_znach = sum / len(l)
 
-f4 = open('text_file_4.txt', 'a', encoding='UTF-8')
-f4.write("\n")
-print('Количество элементов', len(l), '\n','Количество элементов равных пяти: ', krat_5, '\n', 'Среднее арифмитическое: ', sr_znach, file=f4)
-f4.close()
+f2 = open('text_file_2.txt', 'a', encoding='UTF-8')
+f2.write("\n")
+print('Количество элементов равных трём: ', krat_3, '\n','Произведение всех чисел: ', proiz, '\n', 'Минимальный элемент: ', min, file=f2)
+f2.write("\n")
+print('Количество элементов', len(l), '\n','Количество элементов равных пяти: ', krat_5, '\n', 'Среднее арифмитическое: ', sr_znach, file=f2)
+f2.close()

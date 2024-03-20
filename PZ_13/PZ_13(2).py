@@ -1,11 +1,18 @@
 # 2. Для каждой строки матрицы с нечетным номером найти среднее арифметическое ее
 # элементов.
-a = [[1, -2, 3], [-1, 3, -2], [4, -7, 10], [3, 15, 1]]
+import numpy as np
 
-r = []
-for i, b in enumerate(a):
-    if i % 2 != 0:
-        c = sum(b) / len(b)
-        r.append(c)
+def sr_znach(c):
+    return np.mean(c)
 
-print(r)
+a = np.random.randint(1, 10, size=(5, 5))
+
+print(f"Исходная матрица\n {a}")
+
+b = a[::2]
+
+print(f"Нечетные строки\n {b}")
+
+means = np.apply_along_axis(sr_znach, axis=1, arr=b)
+
+print(f"Среднее значение строк\n {means}")

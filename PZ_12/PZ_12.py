@@ -4,18 +4,14 @@ import random
 
 rost = [random.randint(170, 196) for _ in range(20)]
 
-basketball_players = []
-football_players = []
+def is_basketball_player(player_height):
+    return player_height > 190
 
-for i, r in enumerate(rost, start=1):
-    if r > 190:
-        basketball_players.append((i, r))
-    else:
-        football_players.append((i, r))
+basketball_players = list(filter(lambda r: is_basketball_player(r[1]), enumerate(rost, start=1)))
+football_players = list(filter(lambda r: not is_basketball_player(r[1]), enumerate(rost, start=1)))
 
 print("Результаты:")
 print("Баскетбольная команда:")
-
 for player in basketball_players:
     print(f"Игрок {player[0]} - {player[1]} см")
 

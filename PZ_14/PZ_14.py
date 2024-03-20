@@ -7,7 +7,8 @@ f1 = open('Dostoevskiy.txt', 'r', encoding='UTF-8')
 text = f1.read()
 
 sovp = re.findall(r'18\w+', text)
-
+sovp2 = re.findall(r'[год\w]')
 sovp_list = list(set(sovp))
 
 print(sovp_list)
+print(sovp2)

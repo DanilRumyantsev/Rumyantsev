@@ -1,10 +1,13 @@
 # 2. Для каждой строки матрицы с нечетным номером найти среднее арифметическое ее
 # элементов.
+import random
+
 matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [10, 11, 12]
+    [random.randint(1, 10), random.randint(1, 10), random.randint(1, 10)],
+    [random.randint(1, 10), random.randint(1, 10), random.randint(1, 10)],
+    [random.randint(1, 10), random.randint(1, 10), random.randint(1, 10)],
+    [random.randint(1, 10), random.randint(1, 10), random.randint(1, 10)],
+    [random.randint(1, 10), random.randint(1, 10), random.randint(1, 10)]
 ]
 
 odd_rows = filter(lambda x: x % 2 != 0, range(len(matrix)))

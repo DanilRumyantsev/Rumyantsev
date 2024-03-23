@@ -1,14 +1,13 @@
 # 1. В матрице найти отрицательные элементы, сформировать из них новый массив.
 # Вывести размер полученного массива.
+import random
 
 matrix = [
-    [1, -2, 3],
-    [-4, 5, -6],
-    [7, 8, -9]
+    [random.randint(-10, 10), random.randint(-10, 10), random.randint(-10, 10)],
+    [random.randint(-10, 10), random.randint(-10, 10), random.randint(-10, 10)],
+    [random.randint(-10, 10), random.randint(-10, 10), random.randint(-10, 10)]
 ]
 
-# Функциональный подход для нахождения отрицательных элементов
 negative = list(filter(lambda x: x < 0, [element for row in matrix for element in row]))
 
-# Функциональный подход для вывода размера полученного массива
 print(f"Элементы массива: {negative} Размер полученного массива: {len(negative)}")

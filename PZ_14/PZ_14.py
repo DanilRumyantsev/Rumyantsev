@@ -12,3 +12,6 @@ matches = re.findall(r'\b\w*год\w*\b', text)
 
 for year, match in zip(years, matches):
     print(f"{year} - {match}")
+
+
+print(f"Количество элементов в списках : {len(years + matches)}")

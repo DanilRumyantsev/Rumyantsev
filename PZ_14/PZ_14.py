@@ -6,9 +6,9 @@ f1 = open('Dostoevskiy.txt', 'r', encoding='UTF-8')
 
 text = f1.read()
 
-sovp = re.findall(r'18\w+', text)
-sovp2 = re.findall(r'[год\w]')
-sovp_list = list(set(sovp))
+years = re.findall(r'\b\w*?\W*(\d{4})\W*\w*?\b', text)
 
-print(sovp_list)
-print(sovp2)
+matches = re.findall(r'\b\w*год\w*\b', text)
+
+for year, match in zip(years, matches):
+    print(f"{year} - {match}")
